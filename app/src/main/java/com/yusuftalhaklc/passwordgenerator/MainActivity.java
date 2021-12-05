@@ -10,6 +10,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
         ClipData clip = ClipData.newPlainText("password",passwordText.getText().toString());
         clipboard.setPrimaryClip(clip);
         //information message
-        AlertDialog.Builder msg = new AlertDialog.Builder(MainActivity.this);
-        msg.setMessage("Copied!");
-        msg.show();
+        Toast.makeText(MainActivity.this ,"Copied",Toast.LENGTH_LONG).show();
     }
 }
